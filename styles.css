@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.outer {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 50px;
+    text-align: center;
+    margin: 20px;
+    margin-top: 80px; /* Moves the box toward the center */
+    background-color: rgb(206, 206, 206);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 10px rgb(146,146,146);
+
+}
+
+.space {
+    padding: 10px;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    border: 2px solid black;
+    margin: 10px;
+    border-radius: 20px;
+    height: 80px;
+    width: 80px;
+}
+
+.help {
+    border: none;
+    border-radius: 10px;
+    transition: 200ms;
+}
+
+.help:hover {
+    background-color: black;
+    color: white;
+}
+
+.memFlash {                         /* Indicates which box to click by a quick flash*/
+    background-color: white;
+    box-shadow: 0px 0px 10px 10px rgb(255,230,0);
+}
+
+.userFlash {                  /* Indicates which box the user clicked by a quick flash */
+    background-color: black;
+    box-shadow: 0px 0px 10px 10px rgb(0,0,0);
+    height: 80px;
+    width: 80px;
+}
+
+.gameOver {                /* Indicates the game is over by a red background */
+    background-color: red;   
+}
