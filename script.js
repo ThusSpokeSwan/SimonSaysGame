@@ -70,6 +70,14 @@ function checker(){
         }
     })
 
+    // Function for starting the game when the screen is touched
+    body.addEventListener('touchstart',() => {
+        if(started == false){
+            started = true;
+            selectBox();
+        }
+    })
+
 // Function for selecting a random box and calling the flashRand function
 // The id of the box is stored in the memory array
 // The level is incremented
