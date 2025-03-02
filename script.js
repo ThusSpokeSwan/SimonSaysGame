@@ -48,6 +48,7 @@ function checker(){
         memArr = [];
         clicks = 0;
         num = 0;
+        score = 0;
         body.classList.add('gameOver');
         setTimeout(() => {
             body.classList.remove('gameOver');
