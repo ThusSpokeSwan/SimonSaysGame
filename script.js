@@ -3,6 +3,7 @@ let level = document.querySelector('h3');
 let space = document.querySelector('.space');
 let boxes = document.querySelectorAll('.box');
 let help = document.querySelector('.help');
+let rule = document.querySelector('.rules');
 
 let started = false; // Game has not started
 let memArr = [];  // Memory Array storing the order of the boxes to be clicked
@@ -104,4 +105,12 @@ help.addEventListener('click',() => {
     setTimeout(() => {
         level.innerText = initText;
     }, 2000);
+});
+
+rule.addEventListener('click', () => {
+    let initText = level.innerText;
+    level.innerText = "Click the boxes in the same sequence they were flashed";
+    setTimeout(() => {
+        level.innerText = initText;
+    }, 2500);
 });

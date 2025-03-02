@@ -38,6 +38,18 @@ body {
     width: 80px;
 }
 
+.rules {
+    border: none;
+    border-radius: 10px;
+    transition: 200ms;
+    margin-bottom: 7px;
+}
+
+.rules:hover {
+    background-color: black;
+    color: white;
+}
+
 .help {
     border: none;
     border-radius: 10px;
