@@ -107,9 +107,10 @@ help.addEventListener('click',() => {
     }, 2000);
 });
 
+// Function for displaying the rules when the rules button is clicked
 rule.addEventListener('click', () => {
     let initText = level.innerText;
-    level.innerText = "Click the boxes in the same sequence they were flashed";
+    level.innerText = "Click the boxes in the same sequence they were flashed, each new flash adds to the sequence. Good Luck!";
     setTimeout(() => {
         level.innerText = initText;
     }, 2500);
