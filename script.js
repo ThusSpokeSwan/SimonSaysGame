@@ -14,6 +14,8 @@ let num = 0;
 let clicks = 0;
 let score = 0;
 
+let timeoutId;
+
 // Function for storing the id of the box clicked by the player 
 // and checking if it matches the id of the box clicked by the computer by calling the checker function
 space.addEventListener('click',(event) => {
@@ -100,18 +102,18 @@ function flashRand(random){
 
 // Function for displaying the memory array when the help button is clicked
 help.addEventListener('click',() => {
-    let initText = level.innerText;
+    clearTimeout(timeoutId); // Clearing the timeout
     level.innerText = `Memory Array is : ${memArr}`;
-    setTimeout(() => {
-        level.innerText = initText;
+    timeoutId = setTimeout(() => {
+        level.innerText = "Level: " + levelNum;
     }, 2000);
 });
 
 // Function for displaying the rules when the rules button is clicked
 rule.addEventListener('click', () => {
-    let initText = level.innerText;
+    clearTimeout(timeoutId); // Clearing the timeout
     level.innerText = "Click the boxes in the same sequence they were flashed, each new flash adds to the sequence. Good Luck!";
-    setTimeout(() => {
-        level.innerText = initText;
-    }, 2500);
+    timeoutId = setTimeout(() => {
+        level.innerText = "Level: " + levelNum;
+    }, 3500);
 });
